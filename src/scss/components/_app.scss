@@ -1,0 +1,9 @@
+.app {
+  display: grid;
+  grid-template-rows: 115px 1fr;
+  grid-template-columns: 110px 1fr;
+  grid-template-areas: 'nav header' 'nav main';
+  height: 880px;
+  margin: 0 auto;
+  border-radius: 14px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./scss/index.scss">
+  <title>VK-DASHBOARD</title>
+</head>
+
+<body>
+  <div class="app">
+    <nav class="nav">
+      <img class="nav__icon" src="./assets/nav/logo.svg" alt="logo">
+      <img class="nav__icon" src="./assets/nav/home.svg" alt="home">
+      <img class="nav__icon" src="./assets/nav/info.svg" alt="info">
+      <img class="nav__icon" src="./assets/nav/friends.svg" alt="friends">
+      <img class="nav__icon" src="./assets/nav/message.svg" alt="message">
+      <img class="nav__icon" src="./assets/nav/play.svg" alt="play">
+      <img class="nav__icon" src="./assets/nav/statistics.svg" alt="statistics">
+      <img class="nav__icon" src="./assets/nav/settings.svg" alt="settings">
+      <img class="nav__icon nav__icon-sticky" src="./assets/nav/toggle.svg" alt="toggle">
+    </nav>
+    <header class="header">
+      <h1 class="header__title">Statistics</h1>
+      <div class="header__search-form">
+        <img class="header__search-icon" src="./assets/header/icon/search.svg" alt="search">
+        <input class="header__search" type="search" placeholder="Search">
+      </div>
+      <button class="header__notification-btn">
+         <img class="header__notification-btn-icon" src="./assets/header/icon/vector.svg" alt="bell">
+        </button>
+      <div class="header__profile">
+        <p class="header__user-name">Anya</p>
+        <img class="header__avatar" src="./assets/header/images/avatar.png" alt="avatar">
+        <button class="header__dropdown-btn">
+          <img class="header__drowpdown-btn-icon" src="./assets/header/icon/button.svg" alt="button">
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="card card-users card-users--friends">
+        <h2 class="card-users__title">Friends</h2>
+        <p class="card-users__info">271 people</p>
+        <div class="card-users__menu-btn">
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+        </div>
+        <div class="card-users__statistics">
+          <p class="card-users__numbers">+ 0,7%</p>
+          <img class="card-users__icon" src="./assets/main/icon/arrowup.png" alt="arrowup">
+        </div>
+      </div>
+      <div class="card card-users card-users--visitors">
+        <h2 class="card-users__title">Unique visitors </h2>
+        <p class="card-users__info">69 people</p>
+        <div class="card-users__menu-btn">
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+        </div>
+        <div class="card-users__statistics">
+          <p class="card-users__numbers">- 1,7%</p>
+          <img class="card-users__icon" src="./assets/main/icon/arrowdown.png" alt="arrowdown">
+        </div>
+      </div>
+      <div class="card card-users card-users--followers">
+        <h2 class="card-users__title">Followers</h2>
+        <p class="card-users__info">288 people</p>
+        <div class="card-users__menu-btn">
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+          <div class="card-users__circle"></div>
+        </div>
+        <div class="card-users__statistics">
+          <p class="card-users__numbers">+ 1%</p>
+          <img class="card-users__icon" src="./assets/main/icon/arrowup.png" alt="arrowup">
+        </div>
+      </div>
+      <div class="card audience-reach">
+        <h2 class="audience-reach__title">Audience reach</h2>
+        <div class="audience-reach__calendar">
+          <p class="audience-reach__period">31/01/2020 – 06/02/2020</p>
+          <button class="audience-reach__btn">
+            <img class="audience-reach__icon" src="./assets/main/icon/vector.svg" alt="button">
+          </button>
+        </div>
+        <div class="audience-reach__checkbox-total audience-reach__checkbox--active">
+          <input class="audienea-reach__input" type="checkbox" id="scales" name="scales" checked>
+          <label class="audience-reach__label" for="scales">Total</label>
+        </div>
+        <div class="audience-reach__checkbox-follower checkbox">
+          <input class="audienea-reach__input" type="checkbox" id="horns" name="horns" checked>
+          <label class="audience-reach__label" for="horns">Follower</label>
+        </div>
+        <img class="audience-reach__diagram" src="./assets/main/icon/audiencereach.png" alt="diagram">
+      </div>
+      <div class="card device">
+        <h2 class="device__title">Reach by device</h2>
+        <img class="device__diagram" src="./assets/main/icon/ellipse.png" alt="diagram">
+        <div class="device__info">
+          <p class="device__content device__content-desktop">Desktop</p>
+          <p class="device__content device__content-mobile">Mobile views</p>
+        </div>
+      </div>
+      <div class="card gender-age">
+        <h2 class="gender-age__title">Gender / Age</h2>
+        <p class="gender-age__info gender-age__info-women">women</p>
+        <p class="gender-age__info gender-age__info-men">men</p>
+        <img class="gender-age__diagram" src="./assets/main/icon/gender_age.png" alt="diagram">
+      </div>
+      <div class="card geo">
+        <h2 class="geo__title">Geo</h2>
+        <p class="geo__info">Country<span class="geo__info--gray">City</span></p>
+        <img class="geo__diagram" src="./assets/main/icon/geo.png" alt="diagram">
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html>

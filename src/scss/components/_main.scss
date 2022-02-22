@@ -1,0 +1,244 @@
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 390px);
+  grid-template-areas: 'friends visitors followers' 'B B C' 'D D E';
+  gap: 35px 25px;
+  grid-template-rows: 175px 275px 280px;
+  padding: 20px 55px;
+  .card {
+    background: $white-color;
+    border: 1px solid $light-color;
+    box-sizing: border-box;
+    border-radius: 13px;
+  }
+  .card-users {
+    display: grid;
+    grid-template-columns: 150px 180px;
+    grid-template-areas: 'title menu-btn' 'info statistics';
+    grid-template-rows: repeat(2, 75px);
+    width: 390px;
+    height: 175px;
+    padding: 25px;
+    &.--friends {
+      grid-area: friends;
+    }
+    &.--visitors {
+      grid-area: visitors;
+    }
+    &.--followers {
+      grid-area: followers;
+    }
+    &__title {
+      display: grid;
+      justify-items: start;
+      grid-area: title;
+      @include font (700, $sm-text, 24px, $black-color)
+    }
+    &__info {
+      display: grid;
+      justify-items: start;
+      align-items: center;
+      grid-area: info;
+      @include font (500, $sm-text, 24px, $black-color)
+    }
+    &__menu-btn {
+      display: flex;
+      justify-content: end;
+      grid-area: menu-btn;
+    }
+    &__circle {
+      width: 5px;
+      height: 5px;
+      margin-right: 3px;
+      border-radius: 50%;
+      background: $gray-color;
+    }
+    &__statistics {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      grid-area: statistics;
+    }
+    &__numbers {
+      @include font (500, $sm-text, 24px, $gray-color)
+    }
+    &__icon {
+      width: 12px;
+      height: 12px;
+      margin-left: 10px;
+    }
+  }
+  .audience-reach {
+    grid-area: B;
+    display: grid;
+    grid-template-columns: 350px 180px repeat(2, 100px);
+    grid-template-areas: 'title calendar total follower' 'diagram diagram diagram diagram';
+    grid-template-rows: 30px 700px;
+    row-gap: 25px;
+    padding: 25px;
+    &__title {
+      grid-area: title;
+      align-self: center;
+      @include font (700, $sm-text, 24px, $black-color)
+    }
+    &__calendar {
+      display: flex;
+      grid-area: calendar;
+      align-self: center;
+    }
+    &__period {
+      margin-right: 10px;
+      @include font (500, $xs-text, 14px, $black-color)
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
+      background: none;
+    }
+    &__checkbox-total {
+      grid-area: total;
+      align-self: center;
+      @include checkbox ($purple-color, 16px);
+    }
+    &__checkbox-follower {
+      grid-area: follower;
+      align-self: center;
+      @include checkbox ($pink-color, 16px);
+    }
+    &__diagram {
+      grid-area: diagram;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .device {
+    display: grid;
+    grid-area: C;
+    grid-template-columns: 190px 120px;
+    grid-template-rows: 50px 220px;
+    grid-template-areas: 'title title' 'diagram info';
+    gap: 35px 20px;
+    padding: 25px;
+    &__title {
+      grid-area: title;
+      @include font (700, $sm-text, 24px, $black-color)
+    }
+    &__diagram {
+      grid-area: diagram;
+      width: 136px;
+      height: 121px;
+    }
+    &__info {
+      grid-area: info;
+    }
+    &__content {
+      @include font (600, $xs-text, 14px, $black-color);
+      &-desktop {
+        position: relative;
+        margin-bottom: 11px;
+        &::before {
+          content: '';
+          position: absolute;
+          right: calc(100% + 10px);
+          bottom: 5%;
+          width: 16px;
+          height: 16px;
+          background: $pink-color;
+          border: 1px solid $pink-color;
+          border-radius: 5px;
+        }
+      }
+      &-mobile {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          right: calc(100% + 10px);
+          width: 16px;
+          height: 16px;
+          background: $purple-color;
+          border: 1px solid $purple-color;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .gender-age {
+    display: grid;
+    grid-template-columns: 600px repeat(2, 75px);
+    grid-template-rows: 30px 620px;
+    grid-template-areas: 'title women men' 'diagram diagram diagram';
+    row-gap: 20px;
+    grid-area: D;
+    padding: 25px;
+    &__title {
+      grid-area: title;
+      @include font (700, $sm-text, 24px, $black-color)
+    }
+    &__info-women {
+      position: relative;
+      grid-area: women;
+      &::before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 10px);
+        width: 16px;
+        height: 16px;
+        background: $pink-color;
+        border: 1px solid $pink-color;
+        border-radius: 5px;
+      }
+    }
+    &__info-men {
+      position: relative;
+      grid-area: men;
+      justify-self: end;
+      &::before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 10px);
+        width: 16px;
+        height: 16px;
+        background: $purple-color;
+        border: 1px solid $purple-color;
+        border-radius: 5px;
+      }
+    }
+    &__info {
+      margin-left: 11px;
+      @include font (600, $xs-text, 14px, $black-color);
+    }
+    &__diagram {
+      grid-area: diagram;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .geo {
+    display: grid;
+    grid-template-columns: 235px 100px;
+    grid-template-rows: 30px 700px;
+    grid-template-areas: 'title info' 'diagram diagram';
+    grid-area: E;
+    row-gap: 20px;
+    padding: 25px;
+    &__title {
+      grid-area: title;
+      @include font (700, $sm-text, 24px, $black-color)
+    }
+    &__info {
+      grid-area: info;
+      @include font (600, $xs-text, 14px, $black-color);
+      &--gray {
+        margin-left: 10px;
+        @include font (500, $xs-text, 14px, $gray-color)
+      }
+    }
+    &__diagram {
+      grid-area: diagram;
+      width: 330px;
+      height: 140px;
+    }
+  }
+}

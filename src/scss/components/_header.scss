@@ -1,0 +1,44 @@
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 230px 180px 20px 1fr;
+  align-items: center;
+  padding: 42px 55px 15px 55px;
+  &__title {
+    margin-right: 45px;
+    @include font (700, $md-text, 36px, $black-color)
+  }
+  &__search-form {
+    display: flex;
+    align-items: center;
+    width: 153px;
+    height: 32px;
+    margin-right: 17px;
+    background: $white-color;
+    border: 1px solid $light-color;
+    border-radius: 8px;
+  }
+  &__search-icon {
+    margin-left: 18px;
+    margin-right: 11px;
+  }
+  &__search {
+    width: 50px;
+    @include font (500, $xs-text, 14px, $gray-color);
+    border: 0;
+  }
+  &__profile {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  &__user-name {
+    margin-right: 11px;
+    @include font (600, $sm-text, 24px, $black-color)
+  }
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 9px;
+  }
+}
