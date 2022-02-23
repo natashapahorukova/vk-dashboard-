@@ -6,7 +6,7 @@ __The work was written using the following technologies:__
 * Flexbox,
 * Grid,
 * Components.
-__Preview__
+  __Preview__
 <img src='preview.png'>
 
 [DEMO]()
