@@ -9,4 +9,4 @@ __The work was written using the following technologies:__
 # Preview
 <img src='preview.png'>
 
-[DEMO](https://natashapahorukova.github.io/vk-dashboard-/)
+[VK-DASHBOARD](https://natashapahorukova.github.io/vk-dashboard-/)
