@@ -1,5 +1,5 @@
 # vk-dashboard
-The work was written using the following technologies: 
+__The work was written using the following technologies: 
 * SCSS,
 * BEM,
 * Parcel,
