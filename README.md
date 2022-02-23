@@ -8,4 +8,4 @@ __The work was written using the following technologies:__
 * Components.
 <img src='preview.png'>
 
-[DEMO]()
+[DEMO](https://natashapahorukova.github.io/vk-dashboard-/)
