@@ -6,7 +6,7 @@ __The work was written using the following technologies:__
 * Flexbox
 * Grid
 * Components.
-
+# Preview
 <img src='preview.png'>
 
 [DEMO](https://natashapahorukova.github.io/vk-dashboard-/)
